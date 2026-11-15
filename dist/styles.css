@@ -90,13 +90,43 @@ h2 { font-size: clamp(34px, 4.3vw, 63px); line-height: 1; font-weight: 800; }
 .care-icon svg { width: 24px; height: 24px; }
 .care-title { font: 800 27px/1.1 var(--display); letter-spacing: -.056em; }
 .care-description { margin-top: 9px; color: var(--muted); }
-.visit { padding-block: 72px 40px; }
-.visit-panel { position: relative; isolation: isolate; overflow: hidden; display: flex; gap: 26px; justify-content: space-between; align-items: center; padding: clamp(26px, 5vw, 66px); background: #432450; color: #fff9f2; border-radius: 29px; }
+.visit { padding-block: 74px 40px; }
+.about-heading { max-width: 690px; margin-bottom: 26px; }
+.about-heading p { max-width: 58ch; margin: 14px 0 0; color: var(--muted); font-size: 17px; }
+.about-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 16px; margin-bottom: 18px; }
+.about-card { min-width: 0; padding: 23px; border: 1px solid var(--line); border-radius: 22px; background: #fffdfa; }
+.about-card-heading { display: flex; gap: 12px; align-items: center; margin-bottom: 10px; }
+.about-card-heading .care-icon { flex-shrink: 0; margin: 0; }
+.about-card h3 { font-size: 26px; line-height: 1.1; }
+.about-card p { margin: 0; color: var(--muted); }
+.store-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 12px; }
+.store-gallery figure { margin: 0; }
+.store-gallery img { aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; }
+.store-gallery figcaption { margin-top: 5px; color: var(--muted); font-size: 14px; }
+.staff-list { list-style: none; padding: 0; margin: 0; }
+.staff-list li { padding-block: 10px; }
+.staff-list li + li { border-top: 1px solid var(--line); }
+.staff-list .staff-role { color: var(--plum); font-size: 14px; font-weight: 700; }
+.staff-list .staff-bio { margin-top: 4px; }
+.visit-panel { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 28px; padding: clamp(22px, 4vw, 46px); background: #432450; color: #fff9f2; border-radius: 29px; }
 .visit-panel .eyebrow { color: #e6cfef; margin-bottom: 10px; }
-.visit-panel p:last-child { margin: 13px 0 0; color: #eee1f1; }
-.map-button { color: #432450; background: #fff9f2; }
-.map-button:hover { background: #ebd8f2; }
-.visit-paw { position: absolute; z-index: -1; top: -50px; right: 14%; width: 275px; height: 275px; transform: rotate(-18deg); color: #573460; }
+.visit-details h3 { font-size: clamp(31px, 4.3vw, 57px); line-height: 1; }
+.visit-details h4, .staff-list h4 { margin: 0; }
+.visit-details .store-address { margin: 12px 0 0; color: #eee1f1; }
+.visit-hours { margin-top: 22px; }
+.visit-hours p, .whatsapp-status { margin: 4px 0 0; color: #eee1f1; font-size: 14px; }
+.visit-hours dl { margin: 7px 0 0; }
+.visit-hours dl div { display: flex; justify-content: space-between; gap: 12px; padding-block: 5px; border-bottom: 1px solid #694872; font-size: 14px; }
+.visit-hours dd { margin: 0; text-align: right; }
+.whatsapp-status, .whatsapp-button { margin-top: 17px; }
+.whatsapp-button { color: #123729; background: #dbf6e9; }
+.whatsapp-button:hover { background: #bfead6; }
+.visit-map { display: flex; flex-direction: column; margin: 0; padding: 0; background: #faf5fd; color: var(--plum); border-radius: 17px; overflow: hidden; }
+.visit-map iframe { display: block; width: 100%; min-height: 249px; height: 100%; border: 0; flex: 1; }
+.visit-map figcaption { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding: 10px 13px; font-size: 13px; font-weight: 700; }
+.map-button { color: white; background: var(--plum); padding: 9px 13px; font-size: 13px; white-space: normal; }
+.map-button:hover { background: #3c2050; }
+.visit [hidden] { display: none; }
 .footer { display: flex; align-items: center; justify-content: space-between; gap: 22px; padding-block: 14px 33px; }
 .footer p, .back-top { color: var(--muted); font-size: 14px; }
 .footer .brand { font-size: 17px; }
@@ -128,7 +158,9 @@ h2 { font-size: clamp(34px, 4.3vw, 63px); line-height: 1; font-weight: 800; }
   .pet-grid, .care-grid { grid-template-columns: 1fr; gap: 12px; }
   .pet-card img { aspect-ratio: 1.75; }
   .visit { padding-block: 49px 28px; }
-  .visit-panel { align-items: flex-start; flex-direction: column; }
+  .about-grid, .visit-panel { grid-template-columns: 1fr; }
+  .about-card { padding: 18px; }
+  .visit-map iframe { height: 215px; min-height: 215px; }
   .footer { flex-wrap: wrap; gap: 12px; }
   .footer p { order: 3; width: 100%; margin: 0; }
 }

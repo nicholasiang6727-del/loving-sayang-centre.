@@ -31,6 +31,9 @@
     <symbol id="house" viewBox="0 0 24 24"><path d="m3 11 9-7 9 7M5 10v10h14V10"/><path d="M12 17c-2-1.3-3-2.3-3-3.4 0-1.5 1.9-2 3-.8 1.1-1.2 3-.7 3 .8 0 1.1-1 2.1-3 3.4Z"/></symbol>
     <symbol id="sparkle" viewBox="0 0 24 24"><path d="M12 1.5c.7 6.4 4.1 9.8 10.5 10.5-6.4.7-9.8 4.1-10.5 10.5C11.3 16.1 7.9 12.7 1.5 12 7.9 11.3 11.3 7.9 12 1.5Z"/></symbol>
     <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="camera" viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+    <symbol id="team" viewBox="0 0 24 24"><path d="M3 20v-2a4 4 0 0 1 4-4h5a4 4 0 0 1 4 4v2M17 14a4 4 0 0 1 4 4v2"/><circle cx="9.5" cy="7" r="3"/><path d="M16 4a3 3 0 0 1 0 6"/></symbol>
+    <symbol id="chat" viewBox="0 0 24 24"><path d="M21 11.5a9 9 0 0 1-13 8.1L3 21l1.4-4.8A9 9 0 1 1 21 11.5Z"/><path d="M9 9h6m-6 4h4"/></symbol>
   </svg>
   <header class="site-header wrap">
     <a class="brand" href="#top">
@@ -41,7 +44,7 @@
     <nav id="navigation" aria-label="Main navigation">
       <a href="#pets">Meet the pets</a>
       <a href="#care">Pet food &amp; care</a>
-      <a class="nav-visit" href="#visit"><svg aria-hidden="true"><use href="#pin"/></svg> Find us in JB</a>
+      <a class="nav-visit" href="#visit"><svg aria-hidden="true"><use href="#pin"/></svg> About &amp; contact</a>
     </nav>
   </header>
   <main id="main">
@@ -122,15 +125,72 @@
     </section>
 
     <section class="visit wrap section" id="visit" aria-labelledby="visit-title">
-      <div class="visit-panel">
-        <div>
-          <p class="eyebrow"><svg aria-hidden="true"><use href="#pin"/></svg> VISIT US</p>
-          <h2 id="visit-title">See you in JB.</h2>
-          <p>Johor Bahru, Johor, Malaysia</p>
-        </div>
-        <a class="button map-button" href="https://www.google.com/maps/search/?api=1&amp;query=Loving%20%26%20Sayang%20Centre%20Johor%20Bahru" target="_blank" rel="noopener noreferrer">Search on Google Maps <svg aria-hidden="true"><use href="#external"/></svg></a>
-        <svg class="visit-paw" aria-hidden="true"><use href="#paw"/></svg>
+      <div class="about-heading">
+        <h2 id="visit-title">About &amp; Contact</h2>
+        <p>Loving &amp; Sayang Centre is a pet shop and care centre in Johor Bahru. We know a clean space matters when you’re choosing where to bring your pet.</p>
       </div>
+
+      <div class="about-grid">
+        <section class="about-card" aria-labelledby="store-photos-title">
+          <div class="about-card-heading">
+            <span class="care-icon"><svg aria-hidden="true"><use href="#camera"/></svg></span>
+            <h3 id="store-photos-title">Inside the centre</h3>
+          </div>
+          <p id="store-photos-empty">Store photos coming soon.</p>
+          <div class="store-gallery" id="store-photos" hidden></div>
+          <template id="store-photo-template">
+            <figure><img loading="lazy" alt=""><figcaption></figcaption></figure>
+          </template>
+        </section>
+        <section class="about-card" aria-labelledby="store-team-title">
+          <div class="about-card-heading">
+            <span class="care-icon"><svg aria-hidden="true"><use href="#team"/></svg></span>
+            <h3 id="store-team-title">Meet the team</h3>
+          </div>
+          <p id="store-team-empty">Staff introductions coming soon.</p>
+          <ul class="staff-list" id="store-team" hidden></ul>
+          <template id="staff-template">
+            <li><h4></h4><p class="staff-role"></p><p class="staff-bio"></p></li>
+          </template>
+        </section>
+      </div>
+
+      <div class="visit-panel">
+        <div class="visit-details">
+          <p class="eyebrow"><svg aria-hidden="true"><use href="#pin"/></svg> VISIT US</p>
+          <h3>See you in JB.</h3>
+          <p class="store-address" id="store-address">Johor Bahru, Johor, Malaysia</p>
+          <div class="visit-hours">
+            <h4>Operating hours</h4>
+            <p id="store-hours-empty">Hours to be confirmed.</p>
+            <dl id="store-hours" hidden></dl>
+            <template id="store-hours-template">
+              <div><dt></dt><dd></dd></div>
+            </template>
+          </div>
+          <p class="whatsapp-status" id="whatsapp-status">WhatsApp number to be confirmed.</p>
+          <a class="button whatsapp-button" id="whatsapp-link" target="_blank" rel="noopener noreferrer" hidden>
+            <svg aria-hidden="true"><use href="#chat"/></svg> Chat on WhatsApp
+          </a>
+        </div>
+        <figure class="visit-map">
+          <iframe id="store-map" src="https://www.google.com/maps?q=Johor+Bahru%2C+Johor%2C+Malaysia&amp;z=12&amp;output=embed" title="Google map of the Johor Bahru area" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <figcaption>
+            <span id="map-caption">Johor Bahru area · Shop pin to be confirmed</span>
+            <a class="button map-button" id="store-maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=Loving%20%26%20Sayang%20Centre%20Johor%20Bahru" target="_blank" rel="noopener noreferrer">Search on Google Maps <svg aria-hidden="true"><use href="#external"/></svg></a>
+          </figcaption>
+        </figure>
+      </div>
+      <script type="application/json" id="store-details">
+        {
+          "address": "",
+          "mapsUrl": "",
+          "whatsappNumber": "",
+          "hours": [],
+          "photos": [],
+          "staff": []
+        }
+      </script>
     </section>
   </main>
   <footer class="wrap footer">
