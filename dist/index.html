@@ -30,6 +30,7 @@
     <symbol id="scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="m8.1 8.1 11.4 11.4M8.1 15.9 19.5 4.5"/></symbol>
     <symbol id="house" viewBox="0 0 24 24"><path d="m3 11 9-7 9 7M5 10v10h14V10"/><path d="M12 17c-2-1.3-3-2.3-3-3.4 0-1.5 1.9-2 3-.8 1.1-1.2 3-.7 3 .8 0 1.1-1 2.1-3 3.4Z"/></symbol>
     <symbol id="sparkle" viewBox="0 0 24 24"><path d="M12 1.5c.7 6.4 4.1 9.8 10.5 10.5-6.4.7-9.8 4.1-10.5 10.5C11.3 16.1 7.9 12.7 1.5 12 7.9 11.3 11.3 7.9 12 1.5Z"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
   </svg>
   <header class="site-header wrap">
     <a class="brand" href="#top">
@@ -66,30 +67,21 @@
       <div class="section-heading">
         <p class="eyebrow"><svg aria-hidden="true"><use href="#paw"/></svg> MEET THE PETS</p>
         <h2 id="pets-title">Find your little companion.</h2>
-        <p>Explore the pets we sell and learn what each needs at home.</p>
+        <p>Select a pet to explore different breeds and types.</p>
       </div>
       <div class="pet-grid">
-        <details class="pet-card puppy">
-          <summary>
-            <img src="./assets/puppies.jpg" width="960" height="640" loading="lazy" alt="Fluffy golden puppy">
-            <span class="pet-title">Puppies <span class="reveal-icon" aria-hidden="true"></span></span>
-          </summary>
-          <p>Puppies need time for play, training and socialisation. Consider your daily routine and how much time you can spend with a growing dog.</p>
-        </details>
-        <details class="pet-card kitten">
-          <summary>
-            <img src="./assets/kittens.jpg" width="960" height="640" loading="lazy" alt="Orange tabby kitten">
-            <span class="pet-title">Kittens <span class="reveal-icon" aria-hidden="true"></span></span>
-          </summary>
-          <p>Set up a quiet corner with a litter tray, a scratching post and a place to rest, and make time for daily play.</p>
-        </details>
-        <details class="pet-card hamster">
-          <summary>
-            <img src="./assets/hamsters.jpg" width="960" height="640" loading="lazy" alt="Golden hamster with cream cheeks">
-            <span class="pet-title">Hamsters <span class="reveal-icon" aria-hidden="true"></span></span>
-          </summary>
-          <p>Hamsters need room to explore, deep bedding for burrowing and a quiet spot to sleep during the day.</p>
-        </details>
+        <button class="pet-card puppy" type="button" aria-haspopup="dialog" aria-controls="puppies-guide">
+          <img src="./assets/puppies.jpg" width="960" height="640" loading="lazy" alt="">
+          <span class="pet-title">Puppies <span class="reveal-icon"><svg aria-hidden="true"><use href="#arrow"/></svg></span></span>
+        </button>
+        <button class="pet-card kitten" type="button" aria-haspopup="dialog" aria-controls="kittens-guide">
+          <img src="./assets/kittens.jpg" width="960" height="640" loading="lazy" alt="">
+          <span class="pet-title">Kittens <span class="reveal-icon"><svg aria-hidden="true"><use href="#arrow"/></svg></span></span>
+        </button>
+        <button class="pet-card hamster" type="button" aria-haspopup="dialog" aria-controls="hamsters-guide">
+          <img src="./assets/hamsters.jpg" width="960" height="640" loading="lazy" alt="">
+          <span class="pet-title">Hamsters <span class="reveal-icon"><svg aria-hidden="true"><use href="#arrow"/></svg></span></span>
+        </button>
       </div>
       <p class="availability">Pet photos are illustrative. Check current availability with the centre.</p>
     </section>
@@ -137,5 +129,152 @@
     <p>Pet shop &amp; care in Johor Bahru</p>
     <a class="back-top" href="#top">Back to top ↑</a>
   </footer>
+
+  <dialog class="pet-dialog" id="puppies-guide" aria-labelledby="puppies-title" aria-describedby="puppies-intro">
+    <div class="guide">
+      <header class="guide-header">
+        <div>
+          <h2 id="puppies-title">Puppies</h2>
+          <p id="puppies-intro">Get to know a few breeds and what they’re usually like.</p>
+        </div>
+        <form method="dialog">
+          <button class="guide-close" type="submit" aria-label="Close puppies guide" autofocus>
+            <svg aria-hidden="true"><use href="#close"/></svg>
+          </button>
+        </form>
+      </header>
+      <div class="guide-body">
+        <ul class="breed-grid">
+          <li class="breed-card">
+            <img src="./assets/breeds/puppies-1.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="breed-copy">
+              <h3>Golden Retriever</h3>
+              <p>An outgoing, playful dog that enjoys exercise and spending time with people.</p>
+            </div>
+          </li>
+          <li class="breed-card">
+            <img src="./assets/breeds/puppies-2.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="breed-copy">
+              <h3>Toy Poodle</h3>
+              <p>A small, bright dog with a curly coat that needs regular grooming.</p>
+            </div>
+          </li>
+          <li class="breed-card">
+            <img src="./assets/breeds/puppies-3.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="breed-copy">
+              <h3>Shiba Inu</h3>
+              <p>An alert, independent dog that benefits from early socialisation and consistent training.</p>
+            </div>
+          </li>
+          <li class="breed-card">
+            <img src="./assets/breeds/puppies-4.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="breed-copy">
+              <h3>Pembroke Welsh Corgi</h3>
+              <p>An active herding dog with short legs, upright ears and a big personality.</p>
+            </div>
+          </li>
+        </ul>
+        <p class="availability">Illustrative photos. Please check with the centre for current availability.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="pet-dialog" id="kittens-guide" aria-labelledby="kittens-title" aria-describedby="kittens-intro">
+    <div class="guide">
+      <header class="guide-header">
+        <div>
+          <h2 id="kittens-title">Kittens</h2>
+          <p id="kittens-intro">Explore a few breeds, from short-haired cats to fluffy companions.</p>
+        </div>
+        <form method="dialog">
+          <button class="guide-close" type="submit" aria-label="Close kittens guide" autofocus>
+            <svg aria-hidden="true"><use href="#close"/></svg>
+          </button>
+        </form>
+      </header>
+      <div class="guide-body">
+        <ul class="breed-grid">
+          <li class="breed-card">
+            <img src="./assets/breeds/kittens-1.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="breed-copy">
+              <h3>British Shorthair</h3>
+              <p>A sturdy cat with round cheeks and a dense, plush coat.</p>
+            </div>
+          </li>
+          <li class="breed-card">
+            <img src="./assets/breeds/kittens-2.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="breed-copy">
+              <h3>Ragdoll</h3>
+              <p>A blue-eyed cat with a semi-long coat that benefits from regular brushing.</p>
+            </div>
+          </li>
+          <li class="breed-card">
+            <img src="./assets/breeds/kittens-3.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="breed-copy">
+              <h3>Maine Coon</h3>
+              <p>A large, long-haired cat often recognised by its tufted ears and bushy tail.</p>
+            </div>
+          </li>
+          <li class="breed-card">
+            <img src="./assets/breeds/kittens-4.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="breed-copy">
+              <h3>Siamese</h3>
+              <p>A social, vocal cat known for blue eyes and darker markings on the face, ears, paws and tail.</p>
+            </div>
+          </li>
+        </ul>
+        <p class="availability">Illustrative photos. Please check with the centre for current availability.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="pet-dialog" id="hamsters-guide" aria-labelledby="hamsters-title" aria-describedby="hamsters-intro">
+    <div class="guide">
+      <header class="guide-header">
+        <div>
+          <h2 id="hamsters-title">Hamsters</h2>
+          <p id="hamsters-intro">Meet four types of hamsters, each with its own size and markings.</p>
+        </div>
+        <form method="dialog">
+          <button class="guide-close" type="submit" aria-label="Close hamsters guide" autofocus>
+            <svg aria-hidden="true"><use href="#close"/></svg>
+          </button>
+        </form>
+      </header>
+      <div class="guide-body">
+        <ul class="breed-grid">
+          <li class="breed-card">
+            <img src="./assets/breeds/hamsters-1.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="breed-copy">
+              <h3>Syrian Hamster</h3>
+              <p>A larger hamster often seen with a golden coat. Syrian hamsters need to live alone.</p>
+            </div>
+          </li>
+          <li class="breed-card">
+            <img src="./assets/breeds/hamsters-2.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="breed-copy">
+              <h3>Winter White Dwarf Hamster</h3>
+              <p>A small, round hamster with a dark stripe along its back.</p>
+            </div>
+          </li>
+          <li class="breed-card">
+            <img src="./assets/breeds/hamsters-3.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="breed-copy">
+              <h3>Roborovski Dwarf Hamster</h3>
+              <p>A tiny, fast-moving hamster with sandy fur and white markings above the eyes.</p>
+            </div>
+          </li>
+          <li class="breed-card">
+            <img src="./assets/breeds/hamsters-4.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="breed-copy">
+              <h3>Chinese Hamster</h3>
+              <p>A slender hamster with a dark stripe along its back and a short, visible tail.</p>
+            </div>
+          </li>
+        </ul>
+        <p class="availability">Illustrative photos. Please check with the centre for current availability.</p>
+      </div>
+    </div>
+  </dialog>
 </body>
 </html>

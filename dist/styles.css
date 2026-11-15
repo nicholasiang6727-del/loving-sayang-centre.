@@ -59,20 +59,15 @@ h1 em { color: var(--purple); font-style: normal; }
 .section-heading p:last-child:not(.eyebrow) { color: var(--muted); margin: 10px auto 0; max-width: 42ch; }
 h2 { font-size: clamp(34px, 4.3vw, 63px); line-height: 1; font-weight: 800; }
 .pet-grid, .care-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; align-items: start; }
-.pet-card { border: 1px solid var(--line); background: #fffdfa; border-radius: 22px; overflow: hidden; }
-summary { list-style: none; cursor: pointer; }
-summary::-webkit-details-marker { display: none; }
-summary:focus-visible { outline-offset: -5px; border-radius: 22px; }
+.pet-card { display: block; width: 100%; padding: 0; cursor: pointer; font: inherit; color: inherit; text-align: left; border: 1px solid var(--line); background: #fffdfa; border-radius: 22px; overflow: hidden; }
 .pet-card img { aspect-ratio: 1.63; object-fit: cover; object-position: center; }
 .puppy img { background: #dcc4d7; }
 .kitten img { background: #f1d2bc; }
 .hamster img { background: #dce9d4; }
 .pet-title { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 15px 19px; font: 800 26px/1.15 var(--display); letter-spacing: -.035em; }
 .reveal-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #efe4f5; color: var(--plum); font: 500 22px/1 var(--body); }
-.reveal-icon::before { content: "+"; }
-summary:hover .reveal-icon, .pet-card[open] .reveal-icon { color: white; background: var(--plum); }
-.pet-card[open] .reveal-icon::before { content: "−"; }
-.pet-card > p { color: var(--muted); margin: 0; padding: 0 19px 19px; }
+.reveal-icon svg { width: 17px; height: 17px; }
+.pet-card:hover .reveal-icon, .pet-card:focus-visible .reveal-icon { color: white; background: var(--plum); }
 .availability { margin: 17px 0 0; color: var(--muted); text-align: center; font-size: 13px; }
 .care { background: #eee6f4; padding-block: 72px; }
 .care-grid { align-items: stretch; }
@@ -126,4 +121,59 @@ summary:hover .reveal-icon, .pet-card[open] .reveal-icon { color: white; backgro
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
+}
+
+.pet-dialog {
+  width: min(920px, calc(100% - 44px));
+  max-width: none;
+  max-height: calc(100dvh - 44px);
+  padding: 0;
+  overflow: hidden;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 25px;
+  box-shadow: 0 28px 100px #25152b45;
+}
+.pet-dialog::backdrop { background: #23142f99; backdrop-filter: blur(4px); }
+html:has(.pet-dialog[open]) { overflow: hidden; }
+.guide { display: flex; flex-direction: column; max-height: calc(100dvh - 46px); }
+.guide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 28px 20px;
+  background: #f1e8f6;
+  border-bottom: 1px solid var(--line);
+}
+.guide-header h2 { font-size: clamp(34px, 5vw, 52px); }
+.guide-header p { margin: 8px 0 0; color: var(--muted); }
+.guide-close {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid #d3bfdf;
+  border-radius: 50%;
+  color: var(--plum);
+  background: #faf5fd;
+  cursor: pointer;
+}
+.guide-close:hover { color: white; background: var(--plum); }
+.guide-body { overflow-y: auto; overscroll-behavior: contain; padding: 22px 28px; }
+.breed-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.breed-card { overflow: hidden; border: 1px solid var(--line); border-radius: 17px; background: #fffdfa; }
+.breed-card img { aspect-ratio: 3 / 2; object-fit: cover; background: #f1e8f6; }
+.breed-copy { padding: 13px 16px 16px; }
+.breed-copy h3 { font-size: clamp(21px, 3.2vw, 27px); line-height: 1.1; letter-spacing: -.035em; }
+.breed-copy p { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+@media (max-width: 550px) {
+  .pet-dialog { width: calc(100% - 24px); max-height: calc(100dvh - 24px); border-radius: 20px; }
+  .guide { max-height: calc(100dvh - 26px); }
+  .guide-header { padding: 18px 17px; }
+  .guide-header p { font-size: 14px; }
+  .guide-body { padding: 15px 17px; }
+  .breed-grid { grid-template-columns: 1fr; gap: 12px; }
 }

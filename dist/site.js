@@ -25,3 +25,22 @@ document.addEventListener('keydown', (event) => {
 const desktop = matchMedia('(min-width: 701px)');
 desktop.addEventListener('change', closeMenu);
 document.documentElement.classList.add('js');
+
+for (const trigger of document.querySelectorAll('.pet-card[aria-haspopup="dialog"]')) {
+  const dialog = document.getElementById(trigger.getAttribute('aria-controls'));
+  const guideBody = dialog.querySelector('.guide-body');
+
+  trigger.addEventListener('click', () => {
+    closeMenu();
+    dialog.showModal();
+    guideBody.scrollTop = 0;
+  });
+
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+
+  dialog.addEventListener('close', () => {
+    trigger.focus({ preventScroll: true });
+  });
+}
