@@ -150,7 +150,12 @@
           <p id="store-team-empty">Staff introductions coming soon.</p>
           <ul class="staff-list" id="store-team" hidden></ul>
           <template id="staff-template">
-            <li><h4></h4><p class="staff-role"></p><p class="staff-bio"></p></li>
+            <li>
+              <img class="staff-photo" alt="" loading="lazy" hidden>
+              <h4></h4>
+              <p class="staff-role" hidden></p>
+              <p class="staff-bio" hidden></p>
+            </li>
           </template>
         </section>
       </div>
@@ -202,7 +207,15 @@
               "caption": "Shopfront · Reference image"
             }
           ],
-          "staff": []
+          "staff": [
+            {
+              "heading": "Compassionate & Loving",
+              "photo": {
+                "src": "./assets/store/compassionate-loving.png",
+                "alt": "A smiling woman in a grooming apron holding a small dog"
+              }
+            }
+          ]
         }
       </script>
     </section>

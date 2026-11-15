@@ -68,9 +68,18 @@ renderStoreList('store-photos', 'store-photo-template', store.photos, (photo, it
 });
 
 renderStoreList('store-team', 'staff-template', store.staff, (profile, person) => {
-  profile.querySelector('h4').textContent = person.name;
-  profile.querySelector('.staff-role').textContent = person.role;
-  profile.querySelector('.staff-bio').textContent = person.bio;
+  profile.querySelector('h4').textContent = person.heading ?? person.name;
+  for (const field of ['role', 'bio']) {
+    const text = profile.querySelector('.staff-' + field);
+    text.textContent = person[field] ?? '';
+    text.hidden = !person[field];
+  }
+  if (person.photo) {
+    const image = profile.querySelector('.staff-photo');
+    image.src = person.photo.src;
+    image.alt = person.photo.alt;
+    image.hidden = false;
+  }
 });
 
 renderStoreList('store-hours', 'store-hours-template', store.hours, (row, entry) => {

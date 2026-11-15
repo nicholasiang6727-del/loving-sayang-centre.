@@ -105,6 +105,9 @@ h2 { font-size: clamp(34px, 4.3vw, 63px); line-height: 1; font-weight: 800; }
 .store-gallery figcaption { margin-top: 5px; color: var(--muted); font-size: 14px; }
 .staff-list { list-style: none; padding: 0; margin: 0; }
 .staff-list li { padding-block: 10px; }
+.staff-list li:has(.staff-photo:not([hidden])) { text-align: center; }
+.staff-photo { width: min(100%, 236px); aspect-ratio: 1; object-fit: contain; margin: 0 auto 12px; border-radius: 16px; background: #fff; }
+.staff-list h4 { font: 800 clamp(18px, 2vw, 22px)/1.2 var(--display); }
 .staff-list li + li { border-top: 1px solid var(--line); }
 .staff-list .staff-role { color: var(--plum); font-size: 14px; font-weight: 700; }
 .staff-list .staff-bio { margin-top: 4px; }
