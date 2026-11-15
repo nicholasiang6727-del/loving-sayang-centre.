@@ -26,7 +26,7 @@ const desktop = matchMedia('(min-width: 701px)');
 desktop.addEventListener('change', closeMenu);
 document.documentElement.classList.add('js');
 
-for (const trigger of document.querySelectorAll('.pet-card[aria-haspopup="dialog"]')) {
+for (const trigger of document.querySelectorAll('button[aria-haspopup="dialog"][aria-controls]')) {
   const dialog = document.getElementById(trigger.getAttribute('aria-controls'));
   const guideBody = dialog.querySelector('.guide-body');
 

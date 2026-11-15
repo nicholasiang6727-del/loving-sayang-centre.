@@ -93,21 +93,30 @@
           <h2 id="care-title">Care for every day and away.</h2>
         </div>
         <div class="care-grid">
-          <article class="care-card">
-            <span class="care-icon"><svg aria-hidden="true"><use href="#food"/></svg></span>
-            <h3>Pet food</h3>
-            <p>Pick up food for your dog, cat or hamster at the centre.</p>
-          </article>
-          <article class="care-card">
-            <span class="care-icon"><svg aria-hidden="true"><use href="#scissors"/></svg></span>
-            <h3>Grooming</h3>
-            <p>Bring your pet in for grooming to keep their coat clean and tidy.</p>
-          </article>
-          <article class="care-card">
-            <span class="care-icon"><svg aria-hidden="true"><use href="#house"/></svg></span>
-            <h3>Pet accommodation</h3>
-            <p>Arrange a stay for your pet while you’re travelling or away from home.</p>
-          </article>
+          <button class="care-card" type="button" aria-haspopup="dialog" aria-controls="food-guide" aria-labelledby="food-card-title" aria-describedby="food-card-copy">
+            <span class="care-card-top">
+              <span class="care-icon"><svg aria-hidden="true"><use href="#food"/></svg></span>
+              <span class="reveal-icon"><svg aria-hidden="true"><use href="#arrow"/></svg></span>
+            </span>
+            <span class="care-title" id="food-card-title">Pet Food</span>
+            <span class="care-description" id="food-card-copy">Browse food for dogs, cats and hamsters.</span>
+          </button>
+          <button class="care-card" type="button" aria-haspopup="dialog" aria-controls="grooming-guide" aria-labelledby="grooming-card-title" aria-describedby="grooming-card-copy">
+            <span class="care-card-top">
+              <span class="care-icon"><svg aria-hidden="true"><use href="#scissors"/></svg></span>
+              <span class="reveal-icon"><svg aria-hidden="true"><use href="#arrow"/></svg></span>
+            </span>
+            <span class="care-title" id="grooming-card-title">Grooming</span>
+            <span class="care-description" id="grooming-card-copy">Explore coat trims, baths, brushing and rinsing.</span>
+          </button>
+          <button class="care-card" type="button" aria-haspopup="dialog" aria-controls="boarding-guide" aria-labelledby="boarding-card-title" aria-describedby="boarding-card-copy">
+            <span class="care-card-top">
+              <span class="care-icon"><svg aria-hidden="true"><use href="#house"/></svg></span>
+              <span class="reveal-icon"><svg aria-hidden="true"><use href="#arrow"/></svg></span>
+            </span>
+            <span class="care-title" id="boarding-card-title">Pet Accommodation</span>
+            <span class="care-description" id="boarding-card-copy">See examples of spaces for dogs, cats and hamsters.</span>
+          </button>
         </div>
       </div>
     </section>
@@ -144,31 +153,31 @@
         </form>
       </header>
       <div class="guide-body">
-        <ul class="breed-grid">
-          <li class="breed-card">
+        <ul class="guide-grid">
+          <li class="guide-card">
             <img src="./assets/breeds/puppies-1.jpg" width="768" height="512" loading="lazy" alt="">
-            <div class="breed-copy">
+            <div class="guide-copy">
               <h3>Golden Retriever</h3>
               <p>An outgoing, playful dog that enjoys exercise and spending time with people.</p>
             </div>
           </li>
-          <li class="breed-card">
+          <li class="guide-card">
             <img src="./assets/breeds/puppies-2.jpg" width="768" height="512" loading="lazy" alt="">
-            <div class="breed-copy">
+            <div class="guide-copy">
               <h3>Toy Poodle</h3>
               <p>A small, bright dog with a curly coat that needs regular grooming.</p>
             </div>
           </li>
-          <li class="breed-card">
+          <li class="guide-card">
             <img src="./assets/breeds/puppies-3.jpg" width="768" height="512" loading="lazy" alt="">
-            <div class="breed-copy">
+            <div class="guide-copy">
               <h3>Shiba Inu</h3>
               <p>An alert, independent dog that benefits from early socialisation and consistent training.</p>
             </div>
           </li>
-          <li class="breed-card">
+          <li class="guide-card">
             <img src="./assets/breeds/puppies-4.jpg" width="768" height="512" loading="lazy" alt="">
-            <div class="breed-copy">
+            <div class="guide-copy">
               <h3>Pembroke Welsh Corgi</h3>
               <p>An active herding dog with short legs, upright ears and a big personality.</p>
             </div>
@@ -193,31 +202,31 @@
         </form>
       </header>
       <div class="guide-body">
-        <ul class="breed-grid">
-          <li class="breed-card">
+        <ul class="guide-grid">
+          <li class="guide-card">
             <img src="./assets/breeds/kittens-1.jpg" width="768" height="512" loading="lazy" alt="">
-            <div class="breed-copy">
+            <div class="guide-copy">
               <h3>British Shorthair</h3>
               <p>A sturdy cat with round cheeks and a dense, plush coat.</p>
             </div>
           </li>
-          <li class="breed-card">
+          <li class="guide-card">
             <img src="./assets/breeds/kittens-2.jpg" width="768" height="512" loading="lazy" alt="">
-            <div class="breed-copy">
+            <div class="guide-copy">
               <h3>Ragdoll</h3>
               <p>A blue-eyed cat with a semi-long coat that benefits from regular brushing.</p>
             </div>
           </li>
-          <li class="breed-card">
+          <li class="guide-card">
             <img src="./assets/breeds/kittens-3.jpg" width="768" height="512" loading="lazy" alt="">
-            <div class="breed-copy">
+            <div class="guide-copy">
               <h3>Maine Coon</h3>
               <p>A large, long-haired cat often recognised by its tufted ears and bushy tail.</p>
             </div>
           </li>
-          <li class="breed-card">
+          <li class="guide-card">
             <img src="./assets/breeds/kittens-4.jpg" width="768" height="512" loading="lazy" alt="">
-            <div class="breed-copy">
+            <div class="guide-copy">
               <h3>Siamese</h3>
               <p>A social, vocal cat known for blue eyes and darker markings on the face, ears, paws and tail.</p>
             </div>
@@ -242,37 +251,170 @@
         </form>
       </header>
       <div class="guide-body">
-        <ul class="breed-grid">
-          <li class="breed-card">
+        <ul class="guide-grid">
+          <li class="guide-card">
             <img src="./assets/breeds/hamsters-1.jpg" width="768" height="512" loading="lazy" alt="">
-            <div class="breed-copy">
+            <div class="guide-copy">
               <h3>Syrian Hamster</h3>
               <p>A larger hamster often seen with a golden coat. Syrian hamsters need to live alone.</p>
             </div>
           </li>
-          <li class="breed-card">
+          <li class="guide-card">
             <img src="./assets/breeds/hamsters-2.jpg" width="768" height="512" loading="lazy" alt="">
-            <div class="breed-copy">
+            <div class="guide-copy">
               <h3>Winter White Dwarf Hamster</h3>
               <p>A small, round hamster with a dark stripe along its back.</p>
             </div>
           </li>
-          <li class="breed-card">
+          <li class="guide-card">
             <img src="./assets/breeds/hamsters-3.jpg" width="768" height="512" loading="lazy" alt="">
-            <div class="breed-copy">
+            <div class="guide-copy">
               <h3>Roborovski Dwarf Hamster</h3>
               <p>A tiny, fast-moving hamster with sandy fur and white markings above the eyes.</p>
             </div>
           </li>
-          <li class="breed-card">
+          <li class="guide-card">
             <img src="./assets/breeds/hamsters-4.jpg" width="768" height="512" loading="lazy" alt="">
-            <div class="breed-copy">
+            <div class="guide-copy">
               <h3>Chinese Hamster</h3>
               <p>A slender hamster with a dark stripe along its back and a short, visible tail.</p>
             </div>
           </li>
         </ul>
         <p class="availability">Illustrative photos. Please check with the centre for current availability.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="pet-dialog" id="food-guide" aria-labelledby="food-title" aria-describedby="food-intro">
+    <div class="guide">
+      <header class="guide-header">
+        <div>
+          <h2 id="food-title">Pet Food</h2>
+          <p id="food-intro">Explore food options for your pet.</p>
+        </div>
+        <form method="dialog">
+          <button class="guide-close" type="submit" aria-label="Close pet food guide" autofocus>
+            <svg aria-hidden="true"><use href="#close"/></svg>
+          </button>
+        </form>
+      </header>
+      <div class="guide-body">
+        <ul class="guide-grid guide-grid-three">
+          <li class="guide-card">
+            <img src="./assets/care/food-1.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="guide-copy">
+              <h3>Dog Food</h3>
+              <p>Dry kibble, wet dog food and dog biscuits or training treats.</p>
+            </div>
+          </li>
+          <li class="guide-card">
+            <img src="./assets/care/food-2.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="guide-copy">
+              <h3>Cat Food</h3>
+              <p>Dry kibble and wet food in pouches or tins.</p>
+            </div>
+          </li>
+          <li class="guide-card">
+            <img src="./assets/care/food-3.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="guide-copy">
+              <h3>Hamster Food</h3>
+              <p>Hamster pellets and seed-and-grain mixes made for hamsters.</p>
+            </div>
+          </li>
+        </ul>
+        <p class="availability">Photos are illustrative. Check with the centre for current brands and stock.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="pet-dialog" id="grooming-guide" aria-labelledby="grooming-title" aria-describedby="grooming-intro">
+    <div class="guide">
+      <header class="guide-header">
+        <div>
+          <h2 id="grooming-title">Grooming</h2>
+          <p id="grooming-intro">See what each part of a grooming session involves.</p>
+        </div>
+        <form method="dialog">
+          <button class="guide-close" type="submit" aria-label="Close grooming guide" autofocus>
+            <svg aria-hidden="true"><use href="#close"/></svg>
+          </button>
+        </form>
+      </header>
+      <div class="guide-body">
+        <ul class="guide-grid">
+          <li class="guide-card">
+            <img src="./assets/care/grooming-1.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="guide-copy">
+              <h3>Haircut &amp; Trim</h3>
+              <p>Trim and tidy the coat around the body, face or paws.</p>
+            </div>
+          </li>
+          <li class="guide-card">
+            <img src="./assets/care/grooming-2.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="guide-copy">
+              <h3>Shampoo Bath</h3>
+              <p>Wash your pet’s coat to remove dirt and buildup.</p>
+            </div>
+          </li>
+          <li class="guide-card">
+            <img src="./assets/care/grooming-3.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="guide-copy">
+              <h3>Brush &amp; Comb</h3>
+              <p>Brush through the coat to remove loose fur and work through light tangles.</p>
+            </div>
+          </li>
+          <li class="guide-card">
+            <img src="./assets/care/grooming-4.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="guide-copy">
+              <h3>Rinse</h3>
+              <p>Rinse the coat thoroughly to remove shampoo after the bath.</p>
+            </div>
+          </li>
+        </ul>
+        <p class="availability">Photos are illustrative. Check with the centre for available grooming options for your pet.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="pet-dialog" id="boarding-guide" aria-labelledby="boarding-title" aria-describedby="boarding-intro">
+    <div class="guide">
+      <header class="guide-header">
+        <div>
+          <h2 id="boarding-title">Pet Accommodation</h2>
+          <p id="boarding-intro">Explore example setups for your pet’s stay.</p>
+        </div>
+        <form method="dialog">
+          <button class="guide-close" type="submit" aria-label="Close pet accommodation guide" autofocus>
+            <svg aria-hidden="true"><use href="#close"/></svg>
+          </button>
+        </form>
+      </header>
+      <div class="guide-body">
+        <ul class="guide-grid guide-grid-three">
+          <li class="guide-card">
+            <img src="./assets/care/boarding-1.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="guide-copy">
+              <h3>Dog Stay</h3>
+              <p>A dog boarding space with a bed, a blanket and a water bowl.</p>
+            </div>
+          </li>
+          <li class="guide-card">
+            <img src="./assets/care/boarding-2.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="guide-copy">
+              <h3>Cat Stay</h3>
+              <p>A cat boarding space with a raised perch, a hiding spot and a soft mat.</p>
+            </div>
+          </li>
+          <li class="guide-card">
+            <img src="./assets/care/boarding-3.jpg" width="768" height="512" loading="lazy" alt="">
+            <div class="guide-copy">
+              <h3>Hamster Stay</h3>
+              <p>A hamster enclosure with deep bedding, a hideout and an exercise wheel.</p>
+            </div>
+          </li>
+        </ul>
+        <p class="availability">These images show example setups. Check with the centre for available spaces and boarding arrangements.</p>
       </div>
     </div>
   </dialog>
