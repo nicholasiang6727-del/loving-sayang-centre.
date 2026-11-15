@@ -83,8 +83,8 @@ if (store.address) {
   document.getElementById('store-address').textContent = store.address;
   const map = document.getElementById('store-map');
   map.src = 'https://www.google.com/maps?' + new URLSearchParams({ q: store.address, z: '16', output: 'embed' });
-  map.title = 'Google map of the Loving & Sayang Centre address';
-  document.getElementById('map-caption').textContent = 'Loving & Sayang Centre';
+  map.title = 'Google Maps search for the shop address';
+  document.getElementById('map-caption').textContent = 'Shop address search';
   mapsLink.href = 'https://www.google.com/maps/search/?' + new URLSearchParams({ api: '1', query: store.address });
   mapsLink.firstChild.textContent = 'Open in Google Maps ';
 }
